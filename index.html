@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nuvextry | Sites e Landing Pages</title>
+<meta name="description" content="A Nuvextry desenvolve sites e landing pages para empresas, marcas e profissionais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--p:#660066;--pd:#4a004a;--pl:#ecdcec;--bg:#f3eee8;--bg2:#e9e2da;--t:#1c1a1d;--g:#66606b;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Manrope",system-ui,sans-serif;background:var(--bg);color:var(--t);line-height:1.65;padding-bottom:72px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
+h1{font-size:clamp(2.2rem,8vw,4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,5vw,2.5rem);font-weight:800;margin-bottom:14px}
+h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
+.sub{color:var(--g);max-width:620px;margin-bottom:36px}
+.btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;border:1.5px solid var(--p);cursor:pointer;font-family:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.bp{background:var(--p);color:var(--bg)}.bp:hover{background:var(--pd)}
+.bs{color:var(--p);background:transparent}.bs:hover{background:var(--pl)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+header{position:sticky;top:0;z-index:20;background:rgba(243,238,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bg2)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-weight:800;font-size:1.25rem;color:var(--p);text-decoration:none}
+nav{display:none;gap:24px}nav a{text-decoration:none;color:var(--g);font-size:.92rem;font-weight:600}nav a:hover{color:var(--p)}
+header .btn{padding:10px 16px;font-size:.85rem}
+/* hero */
+.hero{padding:64px 0 80px}
+.hero .wrap{display:grid;gap:44px}
+.hero p.l{margin:20px 0 28px;color:var(--g);font-size:1.1rem;max-width:540px}
+.mock{position:relative;height:280px;max-width:420px}
+.win{position:absolute;background:var(--w);border-radius:14px;box-shadow:0 18px 40px rgba(102,0,102,.14);overflow:hidden}
+.win i{display:block;height:22px;background:var(--bg2)}
+.win b{display:block;margin:12px;height:10px;border-radius:5px;background:var(--bg2)}
+.w1{width:78%;height:200px;left:0;top:0}
+.w1 .blk{margin:12px;height:70px;border-radius:8px;background:var(--p)}
+.w2{width:46%;height:210px;right:0;bottom:0;background:var(--pl)}
+.w2 .btnm{margin:14px 12px;height:26px;border-radius:7px;background:var(--p)}
+/* cards */
+.grid{display:grid;gap:16px}
+.card{background:var(--w);border-radius:16px;padding:26px}
+.card p,.card li{color:var(--g);font-size:.95rem}
+.card ul{margin:12px 0 18px 18px}
+.card .btn{margin-top:6px}
+.alt{background:var(--w)}
+.alt .card{background:var(--bg)}
+/* compare */
+.cmp{display:grid;gap:16px;margin-top:28px}
+.cmp .card{border:1.5px solid var(--bg2)}
+.tag{display:inline-block;font-size:.8rem;font-weight:700;color:var(--p);background:var(--pl);padding:3px 10px;border-radius:99px;margin-bottom:10px}
+/* steps */
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{display:flex;gap:16px;background:var(--w);border-radius:16px;padding:22px}
+.step:before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:1.6rem;color:var(--p);min-width:40px}
+.step p{color:var(--g);font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:var(--w);padding:10px 16px;border-radius:99px;font-weight:600;font-size:.92rem}
+.check{list-style:none;display:grid;gap:10px}
+.check li{padding-left:28px;position:relative}
+.check li:before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:3px solid var(--p);border-bottom:3px solid var(--p);transform:rotate(-45deg)}
+/* portfolio */
+.thumb{height:150px;border-radius:12px;background:var(--p);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:2.4rem;font-weight:800;margin-bottom:16px}
+.card small{color:var(--p);font-weight:700}
+/* faq */
+details{background:var(--w);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--p);font-size:1.4rem;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin-top:12px;color:var(--g);font-size:.95rem}
+/* form */
+form{background:var(--w);border-radius:18px;padding:26px;display:grid;gap:16px}
+label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--bg2);border-radius:10px;background:var(--bg);color:var(--t)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--p)}
+textarea{min-height:90px;resize:vertical}
+#ok{display:none;background:var(--pl);border-radius:14px;padding:22px;margin-top:16px}
+#ok.on{display:block}
+.cta{background:var(--p);color:var(--bg);border-radius:24px;padding:48px 26px;text-align:center}
+.cta p{max-width:520px;margin:0 auto 24px;opacity:.9}
+.cta .btn{background:var(--bg);color:var(--p);border-color:var(--bg)}
+footer{background:var(--t);color:#cfc9d3;padding:48px 0 24px;margin-top:72px}
+footer .wrap{display:grid;gap:28px}
+footer strong{color:#fff;font-size:1.2rem}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:#cfc9d3}
+footer small{opacity:.6}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(243,238,232,.96);border-top:1px solid var(--bg2)}
+.bar .btn{flex:1;text-align:center;padding:12px}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(min-width:768px){
+ nav{display:flex}.hero .wrap{grid-template-columns:1.2fr 1fr;align-items:center}
+ .grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(4,1fr)}
+ .cmp{grid-template-columns:1fr 1fr}footer .wrap{grid-template-columns:1.4fr 1fr 1fr}
+ .bar{display:none}body{padding-bottom:0}section{padding:96px 0}
+}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a href="#inicio" class="logo">Nuvextry</a>
+ <nav aria-label="Principal"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#como-funciona">Como funciona</a><a href="#faq">FAQ</a></nav>
+ <a href="#orcamento" class="btn bp">Solicitar orçamento</a>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+ <div>
+  <h1>Soluções digitais para empresas, marcas e profissionais.</h1>
+  <p class="l">Desenvolvemos sites e landing pages com design, funcionalidade e estratégia para ajudar seu negócio a construir uma presença digital profissional.</p>
+  <div class="row"><a href="#orcamento" class="btn bp">Solicitar orçamento</a><a href="#servicos" class="btn bs">Conhecer nossos serviços</a></div>
+ </div>
+ <div class="mock" aria-hidden="true">
+  <div class="win w1"><i></i><div class="blk"></div><b style="width:70%"></b><b style="width:50%"></b></div>
+  <div class="win w2"><i></i><b style="width:80%"></b><b style="width:60%"></b><div class="btnm"></div></div>
+ </div>
+</div></section>
+
+<section id="sobre" class="alt"><div class="wrap rv">
+ <h2>Tecnologia, design e estratégia.</h2>
+ <p class="sub">A Nuvextry desenvolve soluções digitais para empresas, marcas e profissionais que buscam construir ou fortalecer sua presença na internet.</p>
+ <div class="grid c2">
+  <div class="card"><p>Cada projeto é desenvolvido considerando a identidade, as necessidades e os objetivos do negócio, unindo estética, funcionalidade e estratégia.</p></div>
+  <div class="card"><p>A Nuvextry é uma empresa independente. Você conversa direto com quem desenvolve o seu projeto, com acompanhamento próximo da concepção até a entrega.</p></div>
+ </div>
+</div></section>
+
+<section id="servicos"><div class="wrap rv">
+ <h2>O que fazemos</h2>
+ <p class="sub">Três frentes para você construir sua presença digital.</p>
+ <div class="grid c3">
+  <div class="card"><h3>Site</h3><p>Sites completos para apresentar uma empresa, marca, profissional ou serviço na internet. Podem ter várias páginas e seções, como:</p>
+   <ul><li>Início</li><li>Sobre</li><li>Serviços</li><li>Portfólio</li><li>Depoimentos</li><li>FAQ</li><li>Contato</li></ul>
+   <a class="btn bp" href="#orcamento" data-tipo="Site">Quero um site</a></div>
+  <div class="card"><h3>Landing page</h3><p>Uma página desenvolvida para um objetivo específico, reunindo as informações mais importantes em uma estrutura direta. Pode ser usada para:</p>
+   <ul><li>Apresentar um serviço</li><li>Divulgar um produto</li><li>Captar contatos</li><li>Receber solicitações</li><li>Divulgar um evento</li><li>Levar as pessoas a uma ação específica</li></ul>
+   <a class="btn bp" href="#orcamento" data-tipo="Landing page">Quero uma landing page</a></div>
+  <div class="card"><h3>Design digital</h3><p>Criação de elementos visuais para fortalecer a presença digital da marca, alinhados ao projeto que você contratar. Se você ainda não tem identidade visual, converse com a gente: vemos juntos o que faz sentido para o seu caso.</p>
+   <a class="btn bp" href="#orcamento" data-tipo="Design">Quero falar sobre design</a></div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap rv">
+ <h2>Site ou landing page?</h2>
+ <p class="sub">A diferença está na estrutura e no objetivo do projeto.</p>
+ <div class="cmp">
+  <div class="card"><span class="tag">Site</span><p>Tem uma estrutura mais ampla e pode reunir diferentes páginas, informações e objetivos. É indicado quando o negócio precisa de uma presença digital mais completa.</p></div>
+  <div class="card"><span class="tag">Landing page</span><p>É uma página mais focada, normalmente construída em torno de um objetivo específico. Reúne o necessário para conduzir o visitante a uma ação.</p></div>
+ </div>
+ <h3 style="margin:40px 0 14px">Exemplo: uma clínica</h3>
+ <div class="cmp">
+  <div class="card"><h3>Site da clínica</h3><p>Pode ter Início, Sobre a clínica, Especialidades, Profissionais, Serviços, Depoimentos e Contato. O visitante conhece a clínica e pode realizar diferentes ações.</p></div>
+  <div class="card"><h3>Landing page da clínica</h3><p><b>“Agende sua avaliação dermatológica”</b></p>
+   <ul><li>O que é a avaliação</li><li>Para quem é indicada</li><li>Benefícios</li><li>Profissional responsável</li><li>Como funciona</li><li>Perguntas frequentes</li><li>Botão “Agendar avaliação”</li></ul>
+   <p>O foco está naquela oferta e naquela ação.</p></div>
+ </div>
+</div></section>
+
+<section><div class="wrap rv">
+ <h2>Para quem é</h2>
+ <p class="sub">Para quem quer apresentar bem o seu trabalho na internet. Alguns exemplos:</p>
+ <div class="chips"><span>Pequenas empresas</span><span>Profissionais autônomos</span><span>Prestadores de serviços</span><span>Clínicas</span><span>Academias</span><span>Restaurantes</span><span>Lojas</span><span>Profissionais da saúde</span><span>Criadores e marcas</span><span>Negócios que precisam melhorar a presença digital</span></div>
+ <p class="sub" style="margin-top:20px">Não achou o seu segmento? Fale com a gente, a lista acima é só um exemplo.</p>
+</div></section>
+
+<section class="alt"><div class="wrap rv">
+ <h2>Por que ter uma presença digital profissional?</h2>
+ <p class="sub">Uma presença digital bem estruturada pode ajudar o seu negócio a:</p>
+ <ul class="check">
+  <li>Apresentar seus serviços de forma clara</li><li>Facilitar o contato com clientes</li><li>Centralizar informações importantes</li><li>Fortalecer a identidade da marca</li><li>Facilitar que pessoas encontrem e conheçam o negócio</li><li>Passar mais organização e profissionalismo</li>
+ </ul>
+</div></section>
+
+<section id="como-funciona"><div class="wrap rv">
+ <h2>Como funciona</h2>
+ <p class="sub">Do primeiro contato à entrega, em cinco etapas.</p>
+ <div class="steps">
+  <div class="step"><div><h3>Conversa</h3><p>Você explica seu negócio, sua necessidade e o que deseja desenvolver.</p></div></div>
+  <div class="step"><div><h3>Planejamento</h3><p>Organizamos as informações e definimos a estrutura, o conteúdo e a direção visual.</p></div></div>
+  <div class="step"><div><h3>Desenvolvimento</h3><p>O projeto é desenvolvido de acordo com o planejamento definido.</p></div></div>
+  <div class="step"><div><h3>Aprovação</h3><p>Você visualiza o projeto e pode solicitar os ajustes previstos.</p></div></div>
+  <div class="step"><div><h3>Entrega</h3><p>Após a aprovação final, o projeto é entregue pronto para utilização.</p></div></div>
+ </div>
+ <p style="margin-top:28px"><a href="#orcamento" class="btn bp">Quero começar meu projeto</a></p>
+</div></section>
+
+<section class="alt"><div class="wrap rv">
+ <h2>O que eu recebo?</h2>
+ <p class="sub">Cada projeto é definido conforme a sua necessidade. Dependendo do serviço contratado, ele pode incluir:</p>
+ <ul class="check" style="margin-bottom:24px">
+  <li>Estrutura personalizada</li><li>Design alinhado à identidade da marca</li><li>Layout responsivo para diferentes dispositivos</li><li>Botões de contato</li><li>Integração com redes sociais</li><li>Seções personalizadas</li><li>Formulários, quando aplicável</li><li>Publicação e configuração, conforme o projeto</li>
+ </ul>
+ <div class="card"><p><b>O que será entregue fica definido no orçamento e na proposta de cada projeto.</b> Assim você sabe exatamente o que está contratando antes de começar.</p></div>
+</div></section>
+
+<section><div class="wrap rv">
+ <h2>Como trabalhamos</h2>
+ <div class="grid c4" style="margin-top:28px">
+  <div class="card"><h3>Pensado para o seu negócio</h3><p>Cada projeto parte das necessidades e dos objetivos do cliente.</p></div>
+  <div class="card"><h3>Design + funcionalidade</h3><p>A aparência importa, mas o projeto também precisa ser claro, organizado e funcional.</p></div>
+  <div class="card"><h3>Acompanhamento próximo</h3><p>Você acompanha o projeto durante as principais etapas.</p></div>
+  <div class="card"><h3>Soluções personalizadas</h3><p>A estrutura é definida de acordo com o objetivo de cada projeto.</p></div>
+ </div>
+</div></section>
+
+<section id="faq"><div class="wrap rv" style="max-width:780px">
+ <h2>Perguntas frequentes</h2>
+ <p class="sub">Tudo o que costuma surgir antes de contratar.</p>
+ <details><summary>Qual a diferença entre site e landing page?</summary><p>O site tem uma estrutura mais ampla, com várias páginas e objetivos. A landing page é uma página focada em um objetivo específico. Numa clínica, o site apresenta tudo (especialidades, profissionais, contato) e a landing page pode ser só sobre uma oferta, como “Agende sua avaliação”.</p></details>
+ <details><summary>Quanto custa um projeto?</summary><p>O valor depende do tipo, da estrutura e das necessidades do projeto. Por isso o orçamento é personalizado: você conta o que precisa e recebe uma proposta com o que será entregue.</p></details>
+ <details><summary>Quanto tempo demora para ficar pronto?</summary><p>Depende da complexidade do projeto e de quando os materiais necessários (textos, imagens, logo) são enviados e aprovados. O prazo é combinado na proposta.</p></details>
+ <details><summary>Posso pedir alterações?</summary><p>Sim. As alterações incluídas seguem o que foi definido na proposta de cada projeto.</p></details>
+ <details><summary>O site funciona no celular?</summary><p>Sim. Os projetos são desenvolvidos pensando em diferentes tamanhos de tela: celular, tablet e computador.</p></details>
+ <details><summary>Vocês fazem o design?</summary><p>Sim. O projeto pode incluir a criação e a estrutura visual, de acordo com o serviço contratado.</p></details>
+ <details><summary>Vocês fazem apenas sites?</summary><p>Não. A Nuvextry também trabalha com landing pages e soluções de design digital.</p></details>
+ <details><summary>Posso contratar apenas uma landing page?</summary><p>Sim.</p></details>
+ <details><summary>Minha empresa ainda não tem identidade visual. Posso contratar?</summary><p>Pode. Nesse caso, o design digital do projeto define a parte visual (cores, tipografia e estilo das páginas) alinhada ao seu negócio. Conte sua situação no orçamento e indicamos o que faz sentido para você.</p></details>
+ <details><summary>Como faço para solicitar um orçamento?</summary><p>Preencha o formulário abaixo ou chame a Nuvextry no WhatsApp.</p></details>
+</div></section>
+
+<section id="orcamento" class="alt"><div class="wrap rv" style="max-width:680px">
+ <h2>Vamos falar sobre seu projeto?</h2>
+ <p class="sub">Conte um pouco sobre sua empresa, o que você precisa e qual objetivo deseja alcançar.</p>
+ <form id="f">
+  <label>Nome<input name="nome" required autocomplete="name"></label>
+  <label>Empresa/marca<input name="empresa" autocomplete="organization"></label>
+  <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+  <label>WhatsApp<input name="whats" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000"></label>
+  <label>Tipo de projeto<select name="tipo" id="tipo"><option>Site</option><option>Landing page</option><option>Design</option><option>Outro</option></select></label>
+  <label>Conte um pouco sobre o projeto<textarea name="sobre" required></textarea></label>
+  <label>Objetivo do projeto<textarea name="obj"></textarea></label>
+  <button class="btn bp" type="submit">Solicitar orçamento</button>
+ </form>
+ <div id="ok" role="status" tabindex="-1"><h3>Pedido pronto para enviar!</h3><p>Abrimos o WhatsApp com os dados do seu pedido. É só tocar em enviar para a Nuvextry receber. Se preferir, chame por lá a qualquer momento.</p></div>
+</div></section>
+
+<section id="contato"><div class="wrap rv">
+ <h2>Fale com a Nuvextry</h2>
+ <p class="sub">Escolha o canal que for mais fácil para você.</p>
+ <div class="row"><a class="btn bp" data-w href="#">WhatsApp</a><a class="btn bs" href="https://instagram.com/nuvextry" target="_blank" rel="noopener">Instagram</a><a class="btn bs" data-m href="#">E-mail</a><a class="btn bs" href="#orcamento">Solicitar orçamento</a></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap rv"><div class="cta">
+ <h2>Seu próximo projeto começa aqui.</h2>
+ <p>Conte sua ideia para a Nuvextry e descubra como podemos desenvolver uma solução digital para o seu negócio.</p>
+ <a href="#orcamento" class="btn">Solicitar orçamento</a>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+ <div><strong>Nuvextry</strong><p>Tecnologia, design e soluções digitais.</p></div>
+ <nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#como-funciona">Como funciona</a><a href="#faq">FAQ</a><a href="#contato">Contato</a></nav>
+ <nav><a href="https://instagram.com/nuvextry" target="_blank" rel="noopener">Instagram</a><a data-w href="#">WhatsApp</a></nav>
+ <small>© 2026 Nuvextry. Todos os direitos reservados.</small>
+</div></footer>
+
+<div class="bar"><a class="btn bp" data-w href="#">WhatsApp</a><a class="btn bs" href="#orcamento">Orçamento</a></div>
+
+<script>
+// ===== CONTATOS =====
+var WHATSAPP = "5591980354795";
+var EMAIL = "nuvextry@gmail.com";
+// ====================
+function wa(t){return "https://wa.me/"+WHATSAPP+(t?"?text="+encodeURIComponent(t):"")}
+document.querySelectorAll("[data-w]").forEach(function(a){a.href=wa("Olá! Vim pelo site da Nuvextry e gostaria de falar sobre um projeto.");a.target="_blank";a.rel="noopener"});
+document.querySelectorAll("[data-m]").forEach(function(a){a.href="mailto:"+EMAIL});
+document.querySelectorAll("[data-tipo]").forEach(function(a){a.addEventListener("click",function(){document.getElementById("tipo").value=a.dataset.tipo})});
+document.getElementById("f").addEventListener("submit",function(e){
+ e.preventDefault();var d=new FormData(e.target);
+ var m="Olá, Nuvextry! Gostaria de solicitar um orçamento.\n\nNome: "+d.get("nome")+"\nEmpresa/marca: "+(d.get("empresa")||"-")+"\nE-mail: "+d.get("email")+"\nWhatsApp: "+d.get("whats")+"\nTipo de projeto: "+d.get("tipo")+"\nSobre o projeto: "+d.get("sobre")+"\nObjetivo: "+(d.get("obj")||"-");
+ var ok=document.getElementById("ok");ok.classList.add("on");ok.focus();
+ window.open(wa(m),"_blank");e.target.reset();
+});
+if("IntersectionObserver" in window){document.documentElement.classList.add("js");
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.08});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});}
+</script>
+</body>
+</html>
